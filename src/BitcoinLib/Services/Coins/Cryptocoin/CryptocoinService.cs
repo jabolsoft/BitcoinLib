@@ -7,7 +7,7 @@ namespace BitcoinLib.Services.Coins.Cryptocoin
 {
     public class CryptocoinService : CoinService, ICryptocoinService
     {
-        public CryptocoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword)
+        public CryptocoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null, bool ignoreConfigValues = false) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword, ignoreConfigValues)
         {
         }
     }

@@ -8,11 +8,11 @@ namespace BitcoinLib.Services.Coins.Dogecoin
 {
     public class DogecoinService : CoinService, IDogecoinService
     {
-        public DogecoinService(Boolean useTestnet = false) : base(useTestnet)
+        public DogecoinService(Boolean useTestnet = false, bool ignoreConfigValues = false) : base(useTestnet, ignoreConfigValues)
         {
         }
 
-        public DogecoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword)
+        public DogecoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null, bool ignoreConfigValues = false) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword, ignoreConfigValues)
         {
         }
 

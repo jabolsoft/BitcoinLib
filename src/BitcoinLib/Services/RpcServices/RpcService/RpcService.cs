@@ -26,13 +26,14 @@ namespace BitcoinLib.Services
             Parameters = new CoinParameters(this);
         }
 
-        public CoinService(Boolean useTestnet)
+        public CoinService(Boolean useTestnet, bool ignoreConfigValues = false)
             : this()
         {
             Parameters.UseTestnet = useTestnet;
+            Parameters.IgnoreConfigValues = ignoreConfigValues;
         }
 
-        public CoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null)
+        public CoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null, bool ignoreConfigValues = false)
             : this()
         {
             Parameters.DaemonUrl = daemonUrl;
@@ -44,6 +45,8 @@ namespace BitcoinLib.Services
             {
                 Parameters.WalletPassword = walletPassword;
             }
+
+            Parameters.IgnoreConfigValues = ignoreConfigValues;
         }
 
         public String AddMultiSigAddress(Int32 nRquired, List<String> publicKeys, String account)

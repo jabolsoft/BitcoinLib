@@ -8,11 +8,11 @@ namespace BitcoinLib.Services.Coins.Litecoin
 {
     public class LitecoinService : CoinService, ILitecoinService
     {
-        public LitecoinService(Boolean useTestnet = false) : base(useTestnet)
+        public LitecoinService(Boolean useTestnet = false, bool ignoreConfigValues = false) : base(useTestnet, ignoreConfigValues)
         {
         }
 
-        public LitecoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword)
+        public LitecoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null, bool ignoreConfigValues = false) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword, ignoreConfigValues)
         {
         }
 

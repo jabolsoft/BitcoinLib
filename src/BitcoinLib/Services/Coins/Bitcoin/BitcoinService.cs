@@ -8,11 +8,11 @@ namespace BitcoinLib.Services.Coins.Bitcoin
 {
     public class BitcoinService : CoinService, IBitcoinService
     {
-        public BitcoinService(Boolean useTestnet = false) : base(useTestnet)
+        public BitcoinService(Boolean useTestnet = false, bool ignoreConfigValues = false) : base(useTestnet, ignoreConfigValues)
         {
         }
 
-        public BitcoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword)
+        public BitcoinService(String daemonUrl, String rpcUsername, String rpcPassword, String walletPassword = null, bool ignoreConfigValues = false) : base(daemonUrl, rpcUsername, rpcPassword, walletPassword, ignoreConfigValues)
         {
         }
 
